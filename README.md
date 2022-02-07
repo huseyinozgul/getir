@@ -1,20 +1,15 @@
 # Getir API
 
-This project to serve RESTful APIs using Node.js Express, and Mongo for querying records 
+This project serves end-points using NodeJS, Express, and Mongo 
 
-## Manual Installation
-
-If you would still prefer to do the installation manually, follow these steps:
+## Installation
 
 Clone the repo:
 
 ```bash
 git clone https://github.com/huseyinozgul/getir.git
 cd getir
-npx rimraf ./.git
 ```
-
-Install the dependencies:
 
 ```bash
 npm install 
@@ -69,7 +64,7 @@ The environment variables can be found and modified in the `.env` file. They com
 PORT=3000
 
 # URL of the Mongo DB
-MONGODB_URL=mongodb://127.0.0.1:27017/getir
+MONGODB_URI=mongodb://127.0.0.1:27017/getir
 ```
 
 ## Project Structure
@@ -90,7 +85,7 @@ src\
  |--index.js        # App entry point
 ```
 
-### API Endpoints
+## API Endpoints
 
 List of available routes:
 

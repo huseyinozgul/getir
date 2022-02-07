@@ -1,5 +1,4 @@
 const { mocked } = require('jest-mock');
-const httpMocks = require('node-mocks-http');
 
 const recordService = require('../../../src/services/record.service');
 const recordModel = require('../../../src/models/record.model');
