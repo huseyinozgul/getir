@@ -1,0 +1,29 @@
+### Valid Request
+curl --location --request POST 'http://localhost:3000/records' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "startDate": "2015-07-01",
+    "endDate": "2015-07-27",
+    "minCount": 200,
+    "maxCount": 1000
+}'
+
+### Invalid Request - startDate is invalid
+curl --location --request POST 'http://localhost:3000/records' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "startDate": "2015-07-43",
+    "endDate": "2015-07-27",
+    "minCount": 200,
+    "maxCount": 1000
+}'
+
+### Invalid Request - startDate greater than endDate
+curl --location --request POST 'http://localhost:3000/records' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "startDate": "2015-07-01",
+    "endDate": "2015-03-27",
+    "minCount": 200,
+    "maxCount": 1000
+}'

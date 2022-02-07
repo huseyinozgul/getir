@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  node:
+    build: .
+    image: getir-api
+    user: node
+    environment:
+      - MONGODB_URI=mongodb+srv://challengeUser:WUMglwNBaydH8Yvu@challenge-xzwqd.mongodb.net/getir-case-study?retryWrites=true
+    ports:
+      - '3000:3000'
+    expose:
+      - '3000'
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - node-network
+    command: "npm start"
+
+networks:
+  node-network:
+    driver: bridge

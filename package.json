@@ -1,0 +1,48 @@
+{
+  "name": "getir",
+  "version": "1.0.0",
+  "description": "Getir API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "NODE_ENV=dev node src/index.js",
+    "test": "jest -i --colors --verbose --detectOpenHandles",
+    "test:watch": "jest -i --watchAll",
+    "coverage": "jest -i --coverage",
+    "coverage:coveralls": "jest -i --coverage --coverageReporters=text-lcov | coveralls",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huseyinozgul/getir.git"
+  },
+  "keywords": [
+    "getir",
+    "nodejs",
+    "express",
+    "joi",
+    "jest"
+  ],
+  "author": "Hasan Huseyin Ozgul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huseyinozgul/getir/issues"
+  },
+  "homepage": "https://github.com/huseyinozgul/getir#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "http-status": "^1.5.0",
+    "joi": "^17.6.0",
+    "mongoose": "^6.2.0",
+    "morgan": "^1.10.0",
+    "winston": "^3.5.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "eslint": "^8.8.0",
+    "jest": "^27.4.7",
+    "node-mocks-http": "^1.11.0"
+  }
+}
